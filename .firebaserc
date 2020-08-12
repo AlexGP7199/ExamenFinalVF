@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "databaserealtime-1b441": {
+      "hosting": {
+        "AngularNodeFirebasePF": [
+          "databaserealtime-1b441"
+        ]
+      }
+    }
+  }
+}
