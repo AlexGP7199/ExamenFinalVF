@@ -12,6 +12,11 @@ import { DetailsComponent } from './Components/details/details.component';
 import { HomeComponent } from './Components/home/home.component';
 import { DetailsMDComponent } from './Components/details-md/details-md.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +32,10 @@ import { DetailsMDComponent } from './Components/details-md/details-md.component
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
