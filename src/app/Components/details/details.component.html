@@ -1,27 +1,26 @@
 <div class="contenedor">
-
     <div>
         <div class="card cardAddProduct" style="width: 18rem;">
             <h5 style="text-align: center;" class="card-title">Contact Form</h5>
             <div class="card-body">
-                <form>
+                <form >
                     <div class="form-group">
                       <label><b>First Name</b></label>
-                      <input  type="text" class="form-control" id="FirstName" placeholder="FirstName">
-                    </div><div class="form-group">
+                      <input [(ngModel)] = "Contact.FirstName" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="FirstName" placeholder="FirstName">
+                      </div><div class="form-group">
                         <label><b>Last Name</b></label>
-                        <input  type="text" class="form-control" id="LastName" placeholder="LastName">
+                        <input [(ngModel)] = "Contact.LastName" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="LastName" placeholder="LastName">
                       </div>
                       <div class="form-group">
                         <label><b>Email</b></label>
-                        <input  type="text" class="form-control" id="Email" placeholder="Email">
+                        <input [(ngModel)] = "Contact.Email" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="Email" placeholder="Email">
                       </div>
                     <div class="form-group">
                         <label> <b>Phone Number</b></label>
-                        <input type="text" class="form-control" id="PhoneNumber" placeholder="Phone Number">
+                        <input [(ngModel)] = "Contact.PhoneNumber"  [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="PhoneNumber" placeholder="Phone Number">
                       </div>
                   </form>
-                  <button class="btn btn-success" >Cancel</button><button class="btn btn-success">Save</button><button class="btn btn-success">Delete</button>
+                  <button class="btn btn-success" routerLink="/home">Cancel</button><button class="btn btn-success" (click) = "setContact();">Save</button><button class="btn btn-success">Delete</button>
             </div>
           </div>
     </div>

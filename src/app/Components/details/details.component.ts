@@ -1,4 +1,6 @@
+import { ConstantPool } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { RealtdbService } from './../../Services/realtdb.service';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: RealtdbService) { }
 
   ngOnInit(): void {
-  }
 
+  }
+    Contact: any = {}
+  
+    setContact(){
+      console.log(this.Contact);
+      this.db.setContact(this.Contact).subscribe(resp =>{
+        console.log(resp);
+        alert("Se guardo")
+      }, (err) => {
+        alert("Error")
+      }
+      
+      )
+    }
+
+    
+  
 }
